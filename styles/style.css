@@ -1,5 +1,336 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+/* Общие стили */
+
+.decor-background {
+  background: var(--decoration-color);
+}
+
+.layout {
+  margin-inline: 10px;
+}
+
+.wrapper {
+  position: relative;
+  display: grid;
+  margin-block: 10px;
+}
+
+.pos-center {
+  align-content: center;
+  text-align: center;
+}
+
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: "IBM Plex Mono", "monospace";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: var(--page_background);
+}
+
+.decor-background {
+  background: var(--decoration-color);
+}
+
+.layout {
+  margin-inline: 10px;
+}
+
+.wrapper {
+  position: relative;
+  display: grid;
+  margin-block: 10px;
+}
+
+.pos-center {
+  align-content: center;
+  text-align: center;
+}
+
+/* Управление темами*/
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  padding: 2px 12px;
+  color: var(--button-color);
+  line-height: 18px;
+  text-transform: lowercase;
+  background: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button_active {
+  border-color: var(--button-color);
+  cursor: default;
+  pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(--transparent-button-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: 0;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end-color: var(--button-color);
+}
+
+/* Шапка */
+
+.footer,
+.header {
+  display: grid;
+  block-size: 100vh;
+  min-block-size: 668px;
+}
+
+.footer__title,
+.header__title {
+  font-weight: 700;
+  line-height: 82.5%;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color);
+  text-shadow: 2px 2px 0 var(--pink);
+}
+
+.header__theme-menu {
+  justify-self: end;
+  margin-block: 65px;
+}
+
+.header__description {
+  font-weight: 700;
+  color: var(--text-button-color);
+  margin-block: 55px;
+  block-size: fit-content;
+}
+
+/* REC */
+
+.header__decoration {
+  position: absolute;
+  visibility: visible;
+  display: var(--display-rec);
+  align-items: center;
+  gap: 10px;
+  inset-inline-end: 10px;
+  inset-block-start: 0;
+}
+
+.header__decoration::before {
+  content: "REC";
+  color: var(--button-color);
+  line-height: 24px;
+}
+
+.header__decoration::after {
+  content: "";
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px var(--button-color);
+  background: var(--button-color);
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.wrapper::before {
+  border-inline-end: 1px solid var(--button-color);
+  border-block-start: 1px solid var(--button-color);
+  inset-inline-end: 0;
+}
+
+.wrapper::after {
+  border-inline-start: 1px solid var(--button-color);
+  border-block-end: 1px solid var(--button-color);
+  inset-block-end: 0;
+}
+
+
+
+/* Main */
+
+.footer,
+.main {
+    margin-block-start: 40px;
+}
+
+.main__gallery,
+.main__section-gallery,
+.main__section {
+   display: grid;
+}
+
+.main__section-content {
+    gap: 20px;
+}
+
+.main__gallery,
+.main__section-gallery {
+    gap: 10px;
+}
+
+.main__content {
+    display: grid;
+    gap: 20px 0;
+}
+
+.main__section:not(:first-child) {
+    margin-block-start: 50px;
+}
+
+.main__title {
+   color: var(--main-color);
+   font-weight: 700;
+   font-size: inherit;
+}
+
+.main__subtitle {
+    color: var(--text-main-color);
+    font-weight: 700;
+    font-size: inherit;
+}
+
+.main__description {
+    color: var(--text-additional-color);
+    margin-block-start: 10px;
+}
+
+.main__note {
+    color: var(--text-main-color);
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+.main__gallery-item-image {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    block-size: 100%;
+    inline-size: 100%;
+}
+
+.main__link {
+    color: var(--text-additional-color);
+    text-decoration: none;
+    text-shadow: 2px 2px 0 var(--decoration-color);
+}
+
+.main__link:hover {
+    border-bottom: 1px solid var(--text-additional-color);
+}
+
+.main__link:focus {
+    outline: 0;
+}
+
+.main__link:focus-visible {
+    outline: 1px solid var(--text-additional-color);
+}
+
+
+
+
+/* Media запросы */
+
+@media (width >= 768px) {
+  .layout {
+    margin-inline: 20px;
+  }
+  .horizontal {
+    grid-column: 1/4;
+  }
+
+  .wrapper {
+    margin-block: 20px;
+  }
+
+  .negative-margin {
+    margin-inline-start: -20px;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 170px;
+    margin-block-end: 70px;
+  }
+
+  .header__description {
+    justify-self: end;
+    inline-size: 50%;
+  }
+
+  .footer,
+  .main {
+    margin-block-start: 60px;
+  }
+
+  .main__section:not(:first-child) {
+    margin-block-start: 80px;
+  }
+
+  .main__section-content {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .main__gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .main__gallery,
+  .main__section-gallery {
+    gap: 20px;
+  }
+
+  .main__gallery-item:first-child,
+  .main__gallery-item:last-child {
+    grid-column-start: span 2;
+  }
+
+  .main__gallery-item:nth-child(2),
+  .main__gallery-item:nth-child(3) {
+    grid-row-start: span 2;
+  }
+}
+
+@media (width >= 1024px) {
+  .footer__title,
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    margin-inline-start: 20px;
+    margin-block-start: 0;
+    margin-block-end: 215px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .horizontal {
+    grid-row: 2/3;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
 }

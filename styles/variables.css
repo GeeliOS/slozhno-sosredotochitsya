@@ -1,4 +1,15 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+
+  --pink: #ff0070;
+  --gray: #353430;
+  --black: #000028;
+  --button-color: var(--pink);
+  --page_background: url("../images/cover-image-dark.png");
+  --transparent-button-color: rgba(255, 0, 112, 0.4);
+  --title-color: #DB00FF;
+  --text-button-color: var(--black);
+  --additional-color: var(--black);
+  --decoration-color: var(--pink);
+  --text-additional-color: #F1B2CE;
+  --display-rec: flex;
+}
