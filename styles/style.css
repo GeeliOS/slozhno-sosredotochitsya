@@ -199,7 +199,7 @@
 }
 
 .main__title {
-   color: var(--main-color);
+   color: var(--button-color);
    font-weight: 700;
    font-size: inherit;
 }
