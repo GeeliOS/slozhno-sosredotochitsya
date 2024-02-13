@@ -35,25 +35,6 @@
   background-image: var(--page_background);
 }
 
-.decor-background {
-  background: var(--decoration-color);
-}
-
-.layout {
-  margin-inline: 10px;
-}
-
-.wrapper {
-  position: relative;
-  display: grid;
-  margin-block: 10px;
-}
-
-.pos-center {
-  align-content: center;
-  text-align: center;
-}
-
 /* Управление темами*/
 
 .header__theme-menu-button {
