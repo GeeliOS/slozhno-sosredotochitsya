@@ -23,6 +23,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  --text-main-color: #000028;
   font-family: "IBM Plex Mono", monospace;
   font-size: 18px;
   font-weight: 400;
@@ -57,7 +58,7 @@
 
 .header__theme-menu-button {
   border: 1px solid transparent;
-  padding: 2px 11px;
+  padding: 3px 13px;
   color: var(--button-color);
   line-height: 18px;
   text-transform: lowercase;
@@ -109,7 +110,7 @@
 
 .header__theme-menu {
   justify-self: end;
-  margin-block: 65px;
+  margin-block: 63px;
 }
 
 .header__description {
@@ -266,8 +267,8 @@
   }
 
   .header__theme-menu {
-    margin-block-start: 19vh;
-    margin-block-end: 10vh;
+    margin-block-start: 16.5vh;
+    margin-block-end: 7vh;
   }
 
   .header__description {
@@ -316,9 +317,9 @@
 
   .header__theme-menu {
     justify-self: center;
-    margin-inline-start: px;
+    margin-inline-start: 0;
     margin-block-start: 0;
-    margin-block-end: 215px;
+    margin-block-end: 28vh;
   }
 
   .header__theme-menu-list {
