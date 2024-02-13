@@ -23,13 +23,14 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  font-family: "IBM Plex Mono", "monospace";
+  font-family: "IBM Plex Mono", monospace;
   font-size: 18px;
   font-weight: 400;
   line-height: 130%;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-color: var(--additional-color);
   background-image: var(--page_background);
 }
 
@@ -56,7 +57,7 @@
 
 .header__theme-menu-button {
   border: 1px solid transparent;
-  padding: 2px 12px;
+  padding: 2px 11px;
   color: var(--button-color);
   line-height: 18px;
   text-transform: lowercase;
@@ -100,7 +101,7 @@
 .footer__title,
 .header__title {
   font-weight: 700;
-  line-height: 82.5%;
+  line-height: 85%;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--title-color);
   text-shadow: 2px 2px 0 var(--pink);
@@ -131,9 +132,10 @@
 }
 
 .header__decoration::before {
-  content: "REC";
+  content: "rec";
   color: var(--button-color);
   line-height: 24px;
+  text-transform: uppercase;
 }
 
 .header__decoration::after {
@@ -165,90 +167,85 @@
   inset-block-end: 0;
 }
 
-
-
 /* Main */
 
 .footer,
 .main {
-    margin-block-start: 40px;
+  margin-block-start: 40px;
 }
 
 .main__gallery,
 .main__section-gallery,
 .main__section {
-   display: grid;
+  display: grid;
 }
 
 .main__section-content {
-    gap: 20px;
+  gap: 20px;
 }
 
 .main__gallery,
 .main__section-gallery {
-    gap: 10px;
+  gap: 10px;
 }
 
 .main__content {
-    display: grid;
-    gap: 20px 0;
+  display: grid;
+  gap: 20px 0;
 }
 
 .main__section:not(:first-child) {
-    margin-block-start: 50px;
+  margin-block-start: 50px;
 }
 
 .main__title {
-   color: var(--button-color);
-   font-weight: 700;
-   font-size: inherit;
+  color: var(--button-color);
+  font-weight: 700;
+  font-size: inherit;
 }
 
 .main__subtitle {
-    color: var(--text-main-color);
-    font-weight: 700;
-    font-size: inherit;
+  color: var(--text-main-color);
+  font-weight: 700;
+  font-size: inherit;
 }
 
 .main__description {
-    color: var(--text-additional-color);
-    margin-block-start: 10px;
+  color: var(--text-additional-color);
+  margin-block-start: 10px;
 }
 
 .main__note {
-    color: var(--text-main-color);
-    font-weight: inherit;
-    font-size: inherit;
+  color: var(--text-main-color);
+  font-weight: inherit;
+  font-size: inherit;
 }
 
 .main__gallery-item-image {
-    display: block;
-    object-fit: cover;
-    object-position: center;
-    block-size: 100%;
-    inline-size: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  block-size: 100%;
+  inline-size: 100%;
 }
 
 .main__link {
-    color: var(--text-additional-color);
-    text-decoration: none;
-    text-shadow: 2px 2px 0 var(--decoration-color);
+  color: var(--text-additional-color);
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--decoration-color);
 }
 
 .main__link:hover {
-    border-bottom: 1px solid var(--text-additional-color);
+  border-bottom: 1px solid var(--text-additional-color);
 }
 
 .main__link:focus {
-    outline: 0;
+  outline: 0;
 }
 
 .main__link:focus-visible {
-    outline: 1px solid var(--text-additional-color);
+  outline: 1px solid var(--text-additional-color);
 }
-
-
-
 
 /* Media запросы */
 
@@ -256,7 +253,7 @@
   .layout {
     margin-inline: 20px;
   }
-  .horizontal {
+  .direction {
     grid-column: 1/4;
   }
 
@@ -269,8 +266,8 @@
   }
 
   .header__theme-menu {
-    margin-block-start: 170px;
-    margin-block-end: 70px;
+    margin-block-start: 19vh;
+    margin-block-end: 10vh;
   }
 
   .header__description {
@@ -319,7 +316,7 @@
 
   .header__theme-menu {
     justify-self: center;
-    margin-inline-start: 20px;
+    margin-inline-start: px;
     margin-block-start: 0;
     margin-block-end: 215px;
   }
@@ -328,7 +325,7 @@
     flex-direction: row;
   }
 
-  .horizontal {
+  .direction {
     grid-row: 2/3;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
