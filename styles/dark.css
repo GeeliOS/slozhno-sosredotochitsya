@@ -2,7 +2,7 @@
   --button-color: var(--pink);
   --page_background: url("../images/cover-image-dark.png");
   --title-color: #db00ff;
-
+  --text-main-color: var(--black);
   --additional-color: var(--black);
   --decoration-color: var(--pink);
 
@@ -17,7 +17,7 @@
     --button-color: var(--pink);
     --page_background: url("../images/cover-image-dark.png");
     --title-color: #db00ff;
-
+    --text-main-color: var(--black);
     --text-button-color: var(--black);
     --text-additional-color: #f1b2ce;
 

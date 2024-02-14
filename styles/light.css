@@ -1,7 +1,7 @@
 .page.theme_light {
   --button-color: var(--gray);
   --page_background: url("../images/cover-image-light.png");
-
+  --text-main-color: var(--light-black);
   --additional-color: #fff1f7;
   --decoration-color: #ff8dcb;
   --title-color: #ffc2e6;
@@ -15,6 +15,7 @@
   :root {
     --button-color: var(--gray);
     --page_background: url("../images/cover-image-light.png");
+    --text-main-color: var(--light-black);
     --text-button-color: var(--gray);
     --text-additional-color: var(--gray);
     --additional-color: #fff1f7;

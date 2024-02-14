@@ -23,7 +23,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  --text-main-color: #000028;
+
   font-family: "IBM Plex Mono", monospace;
   font-size: 18px;
   font-weight: 400;
